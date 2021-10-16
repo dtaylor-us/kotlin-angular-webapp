@@ -1,5 +1,5 @@
-<h3>Create User</h3>
-<div [hidden]="submitted" style="width: 400px;">
+<h3>Update User</h3>
+<div  style="width: 500px;">
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="name">First Name</label>
@@ -16,10 +16,6 @@
       <input type="text" class="form-control" id="emailId" required [(ngModel)]="user.emailId" name="emailId">
     </div>
 
-    <button type="submit" class="btn btn-danger">Submit</button>
+    <button type="submit" class="btn btn-success">Submit</button>
   </form>
-</div>
-
-<div [hidden]="!submitted">
-  <h4>Successfully submitted!</h4>
 </div>

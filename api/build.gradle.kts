@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     id("org.springframework.boot") version "2.5.4"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
+    id("groovy")
     kotlin("jvm") version "1.5.21"
     kotlin("plugin.spring") version "1.5.21"
 }
@@ -22,6 +23,10 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testCompileOnly("org.codehaus.gmavenplus:gmavenplus-plugin:1.6")
+    testImplementation("org.spockframework:spock-core:2.0-groovy-3.0")
+    testImplementation("org.codehaus.groovy:groovy-all:3.0.8")
+    testImplementation("org.spockframework:spock-spring:2.0-groovy-3.0")
 }
 
 tasks.withType<KotlinCompile> {
