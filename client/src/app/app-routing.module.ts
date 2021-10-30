@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {UserListComponent } from './user-list/user-list.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: '', redirectTo: 'user', pathMatch: 'full' },
   { path: 'users', component: UserListComponent },
   { path: 'add', component: CreateUserComponent },
